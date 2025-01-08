@@ -5,6 +5,9 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../store/slices/authSlice";
+import { FcGoogle } from "react-icons/fc";
+import { TiVendorApple } from "react-icons/ti";
+import { BsFacebook } from "react-icons/bs";
 const Login = () => {
   const [loginData, setLoginData] = useState({
     mobileNumber: "",
@@ -39,9 +42,26 @@ const Login = () => {
 
   return (
     <div className="px-10 py-5 rounded-sm h-full md:h-auto md:px-20 md:py-20">
-      <h2 className="text-xl md:text-2xl text-black mb-7">
-        Let's <span className="text-[#004e89] font-extrabold">Sign In</span>
-      </h2>
+      <div className="md:flex md:justify-between md:items-center">
+        <h2 className="text-xl md:text-2xl text-black mb-7">
+          Let's <span className="text-[#004e89] font-extrabold">Sign In</span>
+        </h2>
+        <div className="hidden md:flex md:gap-3">
+          <button className="flex items-center gap-2 md:text-lg border-2 md:py-2 md:px-3 border-gray-300 rounded-md">
+            <FcGoogle className="text-2xl" />
+            Google
+          </button>
+
+          <button className="flex items-center gap-2 md:text-lg border-2 md:py-2 md:px-3 border-gray-300 rounded-md">
+            <TiVendorApple className="text-2xl" />
+            Apple
+          </button>
+          <button className="flex items-center gap-2 md:text-lg border-2 md:py-2 md:px-3 border-gray-300 rounded-md">
+            <BsFacebook className="text-2xl text-blue-500" />
+            Facebook
+          </button>
+        </div>
+      </div>
       <p className="text-lg md:text-md text-gray-400  italic">
         Hey, enter your details to get sign in <br /> to your account.
       </p>
