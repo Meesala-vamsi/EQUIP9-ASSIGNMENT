@@ -7,7 +7,7 @@ const Home = () => {
     const currentHour = new Date().getHours();
     if (currentHour < 12) {
       return "Good Morning";
-    } else if (currentHour < 18) {
+    } else if (currentHour < 16) {
       return "Good Afternoon";
     } else {
       return "Good Evening";
